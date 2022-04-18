@@ -1,5 +1,5 @@
-
 import './App.css';
+import './hojas-de-estilos/cabecera.css'
 import NavBar from './components/NavBar/NavBar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -12,6 +12,5 @@ function App() {
     </div>
   );
 }
-
-
 export default App;
+
