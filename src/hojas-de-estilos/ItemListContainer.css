@@ -1,0 +1,42 @@
+.ItemListContainer-principal{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  border: 10px solid #F1DEDE;
+  background: rgb(251,243,243);
+  background: linear-gradient(0deg, rgba(251,243,243,1) 8%, rgba(241,222,222,1) 81%);
+}
+.ItemListContainer-secundario{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color:none;
+  height: 80vh;
+  width: 80vw;
+}
+.ItemListContainer-texto{
+ height: 70vh;
+ width: 30vw;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ text-align: center;
+ font-family: 'Montserrat',sans-serif;
+ font-size: 0px;
+ font-weight: 900;
+ 
+ 
+}
+.ItemListContainer-biografia{
+  height: 70vh;
+  width: 48vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Montserrat',sans-serif;
+  font-size: 25px;
+  font-weight: 100;
+ 
+}
