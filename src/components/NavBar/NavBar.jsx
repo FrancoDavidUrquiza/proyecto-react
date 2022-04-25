@@ -1,6 +1,6 @@
 import React from "react";
 // import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
-import CartWidget from "./cartWidget";
+import CartWidget from "./CartWidget";
 function NavBar(props) {
   return (
   <div className='contenedor-cabecera'>
@@ -42,7 +42,7 @@ function NavBar(props) {
         <a href="..">Sobre Mi</a>
         <a href="..">Productos</a>
         <a href="..">Contactos</a>
-        <CartWidget></CartWidget>
+        <CartWidget />
       </nav>
   </div>
   
