@@ -1,6 +1,3 @@
-// import ImgGorro from '../imagenes/gorro.png'
-import ImgBuzo from '../imagenes/buzo.png'
-
 const data = [
     {
       id: 1,

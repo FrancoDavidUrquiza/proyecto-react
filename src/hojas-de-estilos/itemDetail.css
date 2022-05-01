@@ -1,0 +1,123 @@
+.ItemDetailContainer-app{
+  display: flex;
+  flex-direction: row;
+}
+.itemDetailCointainer-principal{
+  
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  justify-content: space-around;
+  align-items: center;
+}
+.itemDetailCointainer-right{
+ 
+  display: flex;
+  flex-direction: column;
+  width: 35vw;
+  height: 80vh;
+  justify-content: space-evenly;
+}
+
+.itemDetailCointainer-left{
+ 
+  display: flex;
+  flex-direction: column;
+  width: 35vw;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+/* Imagen */
+.itemDetailCointainer-img{
+  width: 25vw;
+  height: 60vh;
+}
+
+/* Detalle de Producto */
+.itemDetailCointainer-description{
+  font-family: 'Montserrat';
+}
+.itemDetailCointainer-description h1{
+  font-weight: bold;
+}
+
+/* Contador */
+.itemDetailCointainer-count{
+  
+  height: 15vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.ItemCountOrig-detail{
+ 
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+}
+.ItemCountOrig-btn{
+  
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-around; */
+  align-items: center;
+}
+
+/* Contadro, botones suma resta contador y carrito */
+
+.ItemCountOrig-suma{
+  width: 45px;
+  height: 45px;
+  background-color: white;
+  border: none;
+}
+.ItemCountOrig-icono-suma{
+  width: 25px;
+  height: 25px;
+}
+
+.ItemCountOrig-contador{
+   
+ font-family: 'Montserrat';
+ font-weight: bold;
+ font-size: 40px;
+ width: 20%;
+ height: 100%;
+ align-items: center;
+ display: flex;
+ justify-content: center;
+}
+.ItemCountOrig-resta{
+  width: 45px;
+  height: 45px;
+  background-color: white;
+  border: none;
+}
+.ItemCountOrig-icono-resta{
+  width: 25px;
+  height: 25px;
+}
+
+.ItemCountOrig-btn-carrito{
+ 
+ width: 70%;
+ height: 100%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+.ItemCountOrig-icono-carrito{
+  width: 50px;
+  height: 50px;
+}
