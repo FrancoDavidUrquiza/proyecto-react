@@ -11,6 +11,8 @@ import getData from './services/get';
 import ItemList from './components/ItemCount/ItemList';
 import { useEffect, useState } from 'react';
 import ItemDetailContainer from './components/ItemDetail/ItemDetailContainer';
+import { Routes, Route } from 'react-router-dom'
+
 
 
 function App() {
@@ -26,9 +28,14 @@ function App() {
 
   return (
     <div className="App">
-      <NavBar></NavBar>
+      <NavBar />
       <div className='ItemListContainer-principal'>
-        <ItemListContainer gretting={'Hey there We are Fabrica'}></ItemListContainer>
+        
+      
+        <ItemListContainer gretting={'Hey there We are Fabrica'}/>
+          
+
+       
       </div>
       <div className='ItemDetailContainer-app'>
         <ItemDetailContainer />

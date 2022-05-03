@@ -10,6 +10,7 @@
   margin: auto;
 }
 .ItemCount-card{
+  border: 1px solid black;
   width: 330px;
   height: 430px;
   border-radius: 8px;

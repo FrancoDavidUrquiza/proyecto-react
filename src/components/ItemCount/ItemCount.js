@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from 'react';
 import ImagenCard from '../../imagenes/CrochetBolso.png'
 
+
 function ItemCount ( {initial,stock } ){
   const [numClics,setNumClics] = useState(initial);
   
@@ -26,6 +27,7 @@ function ItemCount ( {initial,stock } ){
         <img src={ImagenCard} className='ItemCount-img'></img>
         <h4>Patrón Bolso Beige Estilo Mochila Wayuu a Crochet</h4>
         <h3>111$</h3>
+        
         <div className='ItemCount-btn'>
           <button 
             onClick={AgregarProductos}>
@@ -42,6 +44,7 @@ function ItemCount ( {initial,stock } ){
             <button>Agregar al Carrito</button>
         </div>
       </div>
+      
     </div>
   );
 }

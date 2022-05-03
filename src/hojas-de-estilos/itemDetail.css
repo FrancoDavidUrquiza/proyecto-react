@@ -41,27 +41,39 @@
 /* Detalle de Producto */
 .itemDetailCointainer-description{
   font-family: 'Montserrat';
+  border-bottom: 2px solid;
+ 
 }
 .itemDetailCointainer-description h1{
   font-weight: bold;
 }
+.itemDetailCointainer-description h4{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 /* Contador */
 .itemDetailCointainer-count{
-  
-  height: 15vw;
+  height: 8vw;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   align-content: center;
+  
 }
 .ItemCountOrig-detail{
- 
-  width: 100%;
+  border: 1px solid gray;
+  background: rgb(251,243,243);
+  background: linear-gradient(0deg, rgba(251,243,243,1) 8%, rgba(241,222,222,1) 81%);
+  width: 20vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-content: center;
   align-items: center;
   min-height: 100%;
 }
@@ -70,7 +82,7 @@
   width: 100%;
   display: flex;
   flex-direction: row;
-  /* justify-content: space-around; */
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -91,8 +103,8 @@
    
  font-family: 'Montserrat';
  font-weight: bold;
- font-size: 40px;
- width: 20%;
+ font-size: 25px;
+ width: 10%;
  height: 100%;
  align-items: center;
  display: flex;
@@ -111,13 +123,16 @@
 
 .ItemCountOrig-btn-carrito{
  
- width: 70%;
- height: 100%;
+ width: 100%;
+ /* height: 100%; */
  display: flex;
- justify-content: center;
+ justify-content:center;
  align-items: center;
+ padding: 0px 22px;
 }
 .ItemCountOrig-icono-carrito{
-  width: 50px;
-  height: 50px;
+  width: 88px;
+  height: 30px;
+  background-color: white;
+  
 }
