@@ -1,5 +1,5 @@
 import React from "react";
-import Item from "./Item";
+import ItemCard from "./ItemCard";
 
 
 const ItemList = ( { products } ) => {
@@ -10,7 +10,7 @@ const ItemList = ( { products } ) => {
             { products.map((product =>{
               
               return(
-                <Item key={product.id} title={product.title} price={product.price} image={product.image}/>
+                <ItemCard key={product.id} title={product.title} price={product.price} image={product.image}/>
               )
             }))}
         

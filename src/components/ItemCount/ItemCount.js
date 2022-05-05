@@ -28,7 +28,7 @@ function ItemCount ( {initial,stock } ){
         <h4>Patrón Bolso Beige Estilo Mochila Wayuu a Crochet</h4>
         <h3>111$</h3>
         
-        <div className='ItemCount-btn'>
+        {/* <div className='ItemCount-btn'>
           <button 
             onClick={AgregarProductos}>
             {<ion-icon name="add-outline"></ion-icon>}
@@ -42,7 +42,7 @@ function ItemCount ( {initial,stock } ){
         <div className="ItemCount-carrito"
           onClick={onAdd}>
             <button>Agregar al Carrito</button>
-        </div>
+        </div> */}
       </div>
       
     </div>

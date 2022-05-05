@@ -6,7 +6,7 @@ const data = [
       title: "Gorro a Crochet",
       descripcion: "este es el primer producto",
       categoria: "Procesadores",
-      price: "3500 $",
+      price: "3500",
       stock: "4",
     },
     {
@@ -15,7 +15,7 @@ const data = [
       title: "Bufanda a Crochet",
       descripcion: "este es el segundo producto",
       categoria: "",
-      price: "5200 $",
+      price: "5200",
       stock: "10",
     },
     {
@@ -25,7 +25,7 @@ const data = [
       title: "Buzo a Crochet",
       descripcion: "este es el tercero producto",
       categoria: "",
-      price: "12000 $",
+      price: "12000",
       stock: "5",
     },
     
