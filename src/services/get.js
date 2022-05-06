@@ -1,3 +1,4 @@
+
 const data = [
     {
       id: 1,
@@ -5,7 +6,7 @@ const data = [
         "https://3.bp.blogspot.com/-UoRFPSKXm2M/VEOTEznPGVI/AAAAAAAABSk/0LHdYlhheaY/s1600/img1413714407476.jpg",
       title: "Gorro a Crochet",
       descripcion: "este es el primer producto",
-      categoria: "Procesadores",
+      category: "Productos",
       price: "3500",
       stock: "4",
     },
@@ -14,7 +15,7 @@ const data = [
       image: "https://www.handworkdiy.com/wp-content/uploads/2020/10/crochet-scarf.png",
       title: "Bufanda a Crochet",
       descripcion: "este es el segundo producto",
-      categoria: "",
+      category: "Productos",
       price: "5200",
       stock: "10",
     },
@@ -24,7 +25,7 @@ const data = [
         "https://i.pinimg.com/originals/8c/43/b4/8c43b48d32062f2ec1e65e277eb923cc.jpg",
       title: "Buzo a Crochet",
       descripcion: "este es el tercero producto",
-      categoria: "",
+      category: "Productos",
       price: "12000",
       stock: "5",
     },

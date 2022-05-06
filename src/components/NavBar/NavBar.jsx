@@ -1,6 +1,6 @@
 import React from "react";
 // import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
-import CartWidget from "./CartWidget";
+import CartWidget from "./CartWidget.js";
 function NavBar(props) {
   return (
   <div className='contenedor-cabecera'>

@@ -13,13 +13,14 @@ function Item({item}) {
             {item?.title}
           </h1>
           <h3>
-            {item?.price}
+            Precio : ${item?.price}
           </h3>
           <h4>
             {item?.discount}
           </h4>
         </div>
         <div className='itemDetailCointainer-count'>
+          <h4>Agregar al Carrito : </h4>
           <ItemCountOring initial={1} stock={5} />
         </div>
       </div>
