@@ -1,8 +1,8 @@
 import React from "react";
-import '../../hojas-de-estilos/itemList.css'
+import '../hojas-de-estilos/itemList.css'
 import { useState,useEffect }  from 'react'
 // import getData from "../../services/get";
-import ItemList from "../ItemCount/ItemList";
+import ItemList from "../components/ItemCount/ItemList";
 import { useParams } from "react-router-dom";
 
 
@@ -68,7 +68,7 @@ function ItemListContainer (){
       .then((response)=>setProducts(response))
       .catch((error)=>console.log("el error",error))
     
-  },[])
+  },[categoryId])
 
   return(
     <div className="itemList-principal">

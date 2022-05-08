@@ -1,7 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import ItemCountOring from '../ItemCountOrig';
 
 function Item({item}) {
+
+  const [cantidadProductos, setcantidadProductos] = useState(null);
+
+  function addHandler(quantityToAdd) {
+    setcantidadProductos(quantityToAdd);
+  }
+
   return (
     <div className='itemDetailCointainer-principal'>
       <div className='itemDetailCointainer-left'>
@@ -21,7 +29,11 @@ function Item({item}) {
         </div>
         <div className='itemDetailCointainer-count'>
           <h4>Agregar al Carrito : </h4>
-          <ItemCountOring initial={1} stock={5} />
+          {cantidadProductos ? 
+          <button><Link to='/cart'>Terminar compra ({cantidadProductos} items) </Link></button> :
+          <ItemCountOring initial={0} stock={10} onAdd={addHandler} />
+            }
+          
         </div>
       </div>
     </div>

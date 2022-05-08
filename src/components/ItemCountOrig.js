@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react'
 import { AiFillMinusCircle,AiFillPlusCircle,AiOutlineShoppingCart } from 'react-icons/ai'
 
-function ItemCountOring( { initial,stock } ) {
+function ItemCountOring( { initial, stock, onAdd } ) {
   const [numClics,setNumClics] = useState(initial);
   
   const AgregarProductos = () =>{
@@ -13,13 +13,11 @@ function ItemCountOring( { initial,stock } ) {
     }
   }
   const sacarProductos = () =>{
-    if(numClics>initial){
+    if(numClics>0){
       setNumClics(numClics-1)
     }
   }
-  const onAdd = () =>{
-    alert('Se agregar los productos al carrito')
-  }
+  
   return (
     <div className='ItemCountOrig-detail'>
       <div className='ItemCountOrig-btn'>
@@ -34,7 +32,7 @@ function ItemCountOring( { initial,stock } ) {
           </button>
       </div>
         <div className='ItemCountOrig-btn-carrito'>
-            <button><AiOutlineShoppingCart className='ItemCountOrig-icono-carrito' color='green' onClick={onAdd} /></button>
+            <button><AiOutlineShoppingCart className='ItemCountOrig-icono-carrito' color='green' onClick={ () =>onAdd(numClics)} /></button>
         </div>
             
             

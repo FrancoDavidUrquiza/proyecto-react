@@ -1,7 +1,7 @@
 import React, { useEffect,useState } from 'react';
 import { useParams } from 'react-router-dom';
 
-import Item from './Item';
+import Item from '../components/ItemDetail/Item';
 
 
 
@@ -41,18 +41,6 @@ const getItem = (id) =>{
       
     ]; 
     const item = data.filter(item => item.id == id)
-    // const data ={
-    //   id: 1,
-    //   image:
-    //   "https://3.bp.blogspot.com/-UoRFPSKXm2M/VEOTEznPGVI/AAAAAAAABSk/0LHdYlhheaY/s1600/img1413714407476.jpg",
-    //   title: "Gorro a Crochet",
-    //   discount:"5% de descuento pagando por transferencia bancaria",
-    //   descripcion: "este es el primer producto",
-    //   price: "1500 $",
-    // }
-    
-    
-
     setTimeout(()=>{
       resolve(item[0]);
     },2000);
@@ -68,7 +56,7 @@ function ItemDetailContainer() {
   
 
   useEffect (()=>{
-    console.log(id)
+    
     getItem(id)
       .then(res =>{
         setItem(res)

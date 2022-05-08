@@ -1,6 +1,7 @@
 import React from "react";
 import CartWidget from "./CartWidget.js";
 import { NavLink } from 'react-router-dom'
+
 function NavBar(props) {
   return (
   <div className='contenedor-cabecera'>
@@ -10,9 +11,9 @@ function NavBar(props) {
         </a>
       </div>
       <nav className="contenedor-navbar">
-        <NavLink className={({isActive}) => (isActive ? 'contenedor-navbar-link-true' : 'contenedor-navbar-link') } to="/sobreMi">Sobre Mi</NavLink>
-        <NavLink className={({isActive}) => (isActive ? 'contenedor-navbar-link-true' : 'contenedor-navbar-link') } to="/productos">Productos</NavLink>
-        <NavLink className={({isActive}) => (isActive ? 'contenedor-navbar-link-true' : 'contenedor-navbar-link') } to="/contacto">Contacto</NavLink>
+        <NavLink className={({isActive}) => (isActive ? 'contenedor-navbar-link-true' : 'contenedor-navbar-link') } to="/SobreMi">Sobre Mi</NavLink>
+        <NavLink className={({isActive}) => (isActive ? 'contenedor-navbar-link-true' : 'contenedor-navbar-link') } to="/category/productos">Productos</NavLink>
+        <NavLink className={({isActive}) => (isActive ? 'contenedor-navbar-link-true' : 'contenedor-navbar-link') } to="/Contacto">Contacto</NavLink>
         <CartWidget />
       </nav>
   </div>

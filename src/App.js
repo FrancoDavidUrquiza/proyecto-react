@@ -10,9 +10,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // import getData from './services/get';
 // import ItemList from './components/ItemCount/ItemList';
 import { useEffect, useState } from 'react';
-import ItemDetailContainer from './components/ItemDetail/ItemDetailContainer';
+import ItemDetailContainer from './pages/ItemDetailContainer.js';
 import { Route, Routes} from 'react-router-dom';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import ItemListContainer from './pages/ItemListContainer.js';
+import Cart from './pages/Cart';
 
 
 
@@ -36,6 +37,7 @@ function App() {
       </div> */}
       <div className='ItemDetailContainer-app'>
         <Routes>
+          <Route path='/cart' element={<Cart></Cart>}></Route>
           <Route path='/item/:id' element={<ItemDetailContainer />}></Route>
           <Route path='/' element={<ItemListContainer/>}></Route>
           <Route path='/category/:categoryId' element={<ItemListContainer/>}></Route>
