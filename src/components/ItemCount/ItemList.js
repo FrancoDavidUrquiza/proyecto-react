@@ -1,13 +1,11 @@
 import React from "react";
-import { useParams } from "react-router-dom";
 import ItemCard from "./ItemCard";
 
 
 
 
 const ItemList = ( { products } ) => {
-  const { categoryId } = useParams()
-  console.log(categoryId)
+
   
     return (
         <>
