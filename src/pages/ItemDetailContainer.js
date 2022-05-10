@@ -1,7 +1,8 @@
-import React, { useEffect,useState } from 'react';
+import React, { useContext, useEffect,useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 import Item from '../components/ItemDetail/Item';
+import CartContext from '../store/cart-context';
 
 
 
@@ -53,6 +54,8 @@ function ItemDetailContainer() {
 
   const [item,setItem] = useState([]);
   const { id } = useParams();
+  
+  
   
 
   useEffect (()=>{

@@ -1,14 +1,20 @@
-import React, { useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import CartContext from '../../store/cart-context';
 import ItemCountOring from '../ItemCountOrig';
 
 function Item({item}) {
 
   const [cantidadProductos, setcantidadProductos] = useState(null);
+  const cartCtx = useContext(CartContext);
 
-  function addHandler(quantityToAdd) {
-    setcantidadProductos(quantityToAdd);
+  
+
+  function addHandler( quantityToAdd) {
+    cartCtx.addProduct(item);
+    
   }
+  
 
   return (
     <div className='itemDetailCointainer-principal'>
@@ -29,12 +35,12 @@ function Item({item}) {
         </div>
         <div className='itemDetailCointainer-count'>
           <h4>Agregar al Carrito : </h4>
-          {cantidadProductos ? 
-          <button><Link to='/cart'>Terminar compra ({cantidadProductos} items) </Link></button> :
+          {cartCtx.products.length ? 
+          <button onClick={()=>console.log(cartCtx)}><Link to='/cart'>Terminar compra ({cantidadProductos} items) </Link></button> :
           <ItemCountOring initial={0} stock={10} onAdd={addHandler} />
             }
-          
         </div>
+        
       </div>
     </div>
         
