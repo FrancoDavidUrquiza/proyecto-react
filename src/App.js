@@ -18,6 +18,7 @@ import Cart from './pages/Cart';
 
 
 
+
 function App() {
   
   // const [products,setProducts] = useState([]);
@@ -31,23 +32,26 @@ function App() {
 
   return (
     <div className="App">
-      <NavBar />
-      {/* <div className='ItemListContainer-principal'>
-        /* <ItemListContainer gretting={'Hey there We are Fabrica'}/>
-      </div> */}
-      <div className='ItemDetailContainer-app'>
-        <Routes>
-          <Route path='/cart' element={<Cart></Cart>}></Route>
-          <Route path='/item/:id' element={<ItemDetailContainer />}></Route>
-          <Route path='/' element={<ItemListContainer/>}></Route>
-          <Route path='/category/:categoryId' element={<ItemListContainer/>}></Route>
-        </Routes>
-        
       
-      </div>
-      {/* <div className='ItemCount-principal'>
-        <ItemCount initial={1} stock={5} />
-      </div> */}
+        <NavBar />
+        {/* <div className='ItemListContainer-principal'>
+          /* <ItemListContainer gretting={'Hey there We are Fabrica'}/>
+        </div> */}
+        <div className='ItemDetailContainer-app'>
+          
+          <Routes>
+            <Route path='/cart' element={<Cart />}/>
+            <Route path='/item/:id' element={<ItemDetailContainer />}/> 
+            <Route path='/' element={<ItemListContainer />}/>
+            <Route path='/category/:categoryId' element={<ItemListContainer />}/>
+          </Routes>
+          
+        
+        </div>
+        {/* <div className='ItemCount-principal'>
+          <ItemCount initial={1} stock={5} />
+        </div> */}
+    
     </div>
     
     

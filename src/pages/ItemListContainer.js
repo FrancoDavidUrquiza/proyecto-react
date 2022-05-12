@@ -15,7 +15,7 @@ function getData(category){
           "https://3.bp.blogspot.com/-UoRFPSKXm2M/VEOTEznPGVI/AAAAAAAABSk/0LHdYlhheaY/s1600/img1413714407476.jpg",
         title: "Gorro a Crochet",
         descripcion: "este es el primer producto",
-        category: "productos",
+        category: "gorro",
         price: "3500",
         stock: "4",
       },
@@ -24,7 +24,7 @@ function getData(category){
         image: "https://www.handworkdiy.com/wp-content/uploads/2020/10/crochet-scarf.png",
         title: "Bufanda a Crochet",
         descripcion: "este es el segundo producto",
-        category: "productos",
+        category: "bufanda",
         price: "5200",
         stock: "10",
       },
@@ -34,7 +34,7 @@ function getData(category){
           "https://i.pinimg.com/originals/8c/43/b4/8c43b48d32062f2ec1e65e277eb923cc.jpg",
         title: "Buzo a Crochet",
         descripcion: "este es el tercero producto",
-        category: "productos",
+        category: "buzo",
         price: "12000",
         stock: "5",
       },
@@ -42,13 +42,13 @@ function getData(category){
       
     ]; 
     
-    const productsFiltered = data.filter(p => p.category === category)
+    const productsFiltered = category ? data.filter(p => p.category === category): data;
 
     
-    setTimeout(()=>{
+    
       resolve(productsFiltered);
 
-    },2000);
+    
   });
   return myPromise;
 }  
@@ -62,6 +62,8 @@ function ItemListContainer (){
 
   const [products,setProducts] = useState([]);
   const { categoryId } = useParams();
+  console.log(categoryId);
+  console.log(products)
 
   useEffect(()=>{
     getData(categoryId)
