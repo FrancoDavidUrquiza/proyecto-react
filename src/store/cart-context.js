@@ -6,7 +6,9 @@ const CartContext = createContext({
   removeProduct:()=>{},
   clear: ()=>{},
   isInCart: ()=>{},
-  
+  totalCount: ()=>{},
+  totalPrice: ()=>{},
+  unitsPerProduct: ()=>{},
 });
 
 
@@ -39,12 +41,22 @@ export const CartContextProvider = ({ children }) =>  {
     setProductsList([]);
   }
   
+  //Funcion para ver si ay productos en el carro 
   const isInCart = (id)=>{
-    return productsList.map(p=>p.id).indexOf(id) !== -1;
+    return productsList.some((item)=>item.id === id)
   }
 
-  
+  const totalCount = () =>{
+    return productsList.reduce((total, item)=> total + item.quantity, 0)
+  };
 
+  const totalPrice = () =>{
+    return productsList.reduce((total,item)=> total + item.quantity *item.price, 0)
+  }
+  
+  const unitsPerProduct = (id)=>{
+    return productsList.find( item => item.id === id).quantity;
+  };
 
   return (
     <CartContext.Provider value={{
@@ -53,6 +65,9 @@ export const CartContextProvider = ({ children }) =>  {
       removeProduct,
       clear,
       isInCart,
+      totalCount,
+      totalPrice,
+      unitsPerProduct,
       
 
     }}>

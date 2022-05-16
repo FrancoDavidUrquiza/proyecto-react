@@ -62,8 +62,8 @@ function ItemListContainer (){
 
   const [products,setProducts] = useState([]);
   const { categoryId } = useParams();
-  console.log(categoryId);
-  console.log(products)
+  // console.log(categoryId);
+  // console.log(products)
 
   useEffect(()=>{
     getData(categoryId)

@@ -1,9 +1,28 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import CartItem from '../components/CartItem/CartItem';
+import CartContext from '../store/cart-context';
+import '../hojas-de-estilos/cartItem.css'
 
 function Cart() {
+    const cartCtx = useContext(CartContext)
+
     return (
-        <div>
-            <h1>Cart</h1>
+        <div className='Cart-princripal'>
+            <div className='Cart-item'>
+                {cartCtx.products.map(p => <CartItem item={p} key={p.id} />)}
+            </div>
+            
+            {cartCtx.products.length !== 0 ?
+            <div className='Cart-dato'>
+                <p>Precio Total : ${cartCtx.totalPrice()}</p>
+                <button className='Cart-btn'>Terminar compra</button>
+            </div> :
+            <>
+                <h2>No hay Productos en el carro</h2>
+                <Link to='/'>Ir al inicio</Link>
+            </>
+            }
             
         </div>
     );

@@ -1,0 +1,61 @@
+
+
+.CartItem-principal{
+  width: 70vw;
+  display: flex;
+  flex-direction: row;
+  font-family: 'Montserrat',sans-serif;
+}
+
+/* Imagenes */
+.CartItem-img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20vw;
+  height: 25vw;
+  
+}
+.CartItem-imagen{
+  width: 90%;
+  height:90%;
+}
+/* imagenes */
+
+/* Cart datos  */
+.CartItem-datos{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  text-align:start;
+    
+}
+.CartItem-title{
+  font-weight: bold;
+  font-size: 25px;
+}
+/* Cart Datos */
+
+
+.Cart-princripal{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-family: 'Montserrat',sans-serif;
+ 
+}
+.Cart-dato{
+  display: flex;
+  flex-direction: column;
+  width: 25vw;
+  height: 50vh;
+  background-color:darkgrey;
+  text-align: center;
+  align-items: center;
+  
+}
+.Cart-btn{
+  width: 40%;
+}
+
+
