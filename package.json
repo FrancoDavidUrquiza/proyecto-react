@@ -2,12 +2,13 @@
   "name": "proyecto-react",
   "version": "0.1.0",
   "private": true,
-  "hompage":"https://francodavidurquiza.github.io/proyecto-react/",
+  "hompage": "https://francodavidurquiza.github.io/proyecto-react/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.0.1",
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.1.3",
+    "firebase": "^9.8.1",
     "gh-pages": "^4.0.0",
     "react": "^18.0.0",
     "react-bootstrap": "^2.2.3",
@@ -18,8 +19,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "predeploy":"npm run build",
-    "deploy":"gh-pages -d build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

@@ -4,53 +4,23 @@ import { useState,useEffect }  from 'react'
 // import getData from "../../services/get";
 import ItemList from "../components/ItemCount/ItemList";
 import { useParams } from "react-router-dom";
+import {collection,getDocs,getFirestore,query, where, limit, doc } from 'firebase/firestore'
 
 
 function getData(category){
-  const myPromise  = new Promise ((resolve,rejeted) =>{
-    const data = [
-      {
-        id: 1,
-        image:
-          "https://3.bp.blogspot.com/-UoRFPSKXm2M/VEOTEznPGVI/AAAAAAAABSk/0LHdYlhheaY/s1600/img1413714407476.jpg",
-        title: "Gorro a Crochet",
-        descripcion: "este es el primer producto",
-        category: "gorro",
-        price: "3500",
-        stock: "4",
-      },
-      {
-        id: 2,
-        image: "https://www.handworkdiy.com/wp-content/uploads/2020/10/crochet-scarf.png",
-        title: "Bufanda a Crochet",
-        descripcion: "este es el segundo producto",
-        category: "bufanda",
-        price: "5200",
-        stock: "10",
-      },
-      {
-        id: 3,
-        image:
-          "https://i.pinimg.com/originals/8c/43/b4/8c43b48d32062f2ec1e65e277eb923cc.jpg",
-        title: "Buzo a Crochet",
-        descripcion: "este es el tercero producto",
-        category: "buzo",
-        price: "12000",
-        stock: "5",
-      },
-      
-      
-    ]; 
-    
-    const productsFiltered = category ? data.filter(p => p.category === category): data;
+  const db = getFirestore();
 
-    
-    
-      resolve(productsFiltered);
+    const itemCollection = collection(db, 'items');
 
-    
-  });
-  return myPromise;
+    const q = category && query(
+      itemCollection,
+      where('category', '==', category),
+      // limit(1)
+
+    )
+
+   return getDocs(q || itemCollection)
+  
 }  
 
 
@@ -66,8 +36,33 @@ function ItemListContainer (){
   // console.log(products)
 
   useEffect(()=>{
+    // const db = getFirestore();
+
+    // const itemCollection = collection(db, 'items');
+
+    // const q = query(
+    //   itemCollection,
+    //   where('price', '<', 5000),
+    //   limit(1)
+
+    // )
+
+    // getDocs(q)
+    //   .then(snapshot=>{
+    //     console.log(snapshot.docs.map(doc => { 
+    //       return { ...doc.data(), id : doc.id }
+    //     }))
+    //   })
+    //   .catch(
+    //     err => console.log(err)
+    //   );
+
     getData(categoryId)
-      .then((response)=>setProducts(response))
+      .then(snapshop => {
+        setProducts(snapshop.docs.map(doc => {
+           return { ...doc.data(), id : doc.id }
+          }));
+      })
       .catch((error)=>console.log("el error",error))
     
   },[categoryId])
