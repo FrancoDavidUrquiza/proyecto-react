@@ -1,7 +1,12 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import CartContext from '../../store/cart-context.js';
 
 
 function CartItem({ item }) {
+
+    const cartCtx = useContext(CartContext)
+    
+
     return (
         <>
         <div className='CartItem-principal'>
@@ -11,8 +16,11 @@ function CartItem({ item }) {
             </div>
             <div className='CartItem-datos'>
                 <p className='CartItem-title'>{ item?.title  }</p>
-                <p>Precio :${ item?.price }</p>
+                <p>Precio Unitario :${ item?.price }</p>
                 <p>Cantidad : { item?.quantity}</p>
+                <p>Precio Total :${ item.price * item.quantity }</p>
+                <button onClick={()=>cartCtx.removeProduct(item.id)}>Remover Producto</button>
+                
             </div>
 
 

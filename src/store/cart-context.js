@@ -9,6 +9,8 @@ const CartContext = createContext({
   totalCount: ()=>{},
   totalPrice: ()=>{},
   unitsPerProduct: ()=>{},
+  // getQuantity: ()=>{},
+  getTotal: ()=>{},
 });
 
 
@@ -57,6 +59,17 @@ export const CartContextProvider = ({ children }) =>  {
   const unitsPerProduct = (id)=>{
     return productsList.find( item => item.id === id).quantity;
   };
+  // const getQuantity = () =>{
+  //   let cant = 0; 
+  //   productsList.forEach((e)=> cant += e.quantity)
+  //   return cant
+  // }
+
+  const getTotal = () =>{
+    let total = 0
+    productsList.forEach((e)=> total += (e.quantity * e.price))
+    return total
+  }
 
   return (
     <CartContext.Provider value={{
@@ -68,6 +81,8 @@ export const CartContextProvider = ({ children }) =>  {
       totalCount,
       totalPrice,
       unitsPerProduct,
+      // getQuantity,
+      getTotal,
       
 
     }}>

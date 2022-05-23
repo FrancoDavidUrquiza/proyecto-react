@@ -37,13 +37,11 @@ function Item({item}) {
         <div className='itemDetailCointainer-count'>
           <h4>Agregar al Carrito : </h4>
           <ItemCountOring initial={0} stock={10} onAdd={addHandler} />
-          <button onClick={() => console.log(cartCtx.products)}>Imprimir carrito</button>
-          <button onClick={()=>cartCtx.removeProduct(item.id)}>Remover Producto</button>
-          <button onClick={()=>console.log(cartCtx.clear())}>Limpiar Carrito</button>
-          <button onClick={() => console.log(cartCtx.isInCart(item.id))}>Is in cart</button>
-          
+          {/* <button onClick={() => console.log(cartCtx.products)}>Imprimir carrito</button> */}
+          {/* <button onClick={() => console.log(cartCtx.isInCart(item.id))}>Is in cart</button>
+           */}
           {cartCtx.products.length ? 
-          <button onClick={()=>console.log(cartCtx)}><Link to='/cart'>Terminar compra ({cantidadProductos} items) </Link></button> : 'x'}
+          <button><Link  to='/cart'>Ir al carrito</Link></button> : 'No hay productos en el carrito'}
           
         </div>
         

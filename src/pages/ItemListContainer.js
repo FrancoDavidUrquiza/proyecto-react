@@ -4,7 +4,9 @@ import { useState,useEffect }  from 'react'
 // import getData from "../../services/get";
 import ItemList from "../components/ItemCount/ItemList";
 import { useParams } from "react-router-dom";
-import {collection,getDocs,getFirestore,query, where, limit, doc } from 'firebase/firestore'
+import {collection,getDocs,getFirestore,query, where} from 'firebase/firestore'
+import Spinner  from '../components/Spinner/Spinner.js';
+
 
 
 function getData(category){
@@ -31,37 +33,21 @@ function getData(category){
 function ItemListContainer (){
 
   const [products,setProducts] = useState([]);
+  const [load,setLoad] = useState(true)
   const { categoryId } = useParams();
-  // console.log(categoryId);
-  // console.log(products)
+  
 
   useEffect(()=>{
-    // const db = getFirestore();
-
-    // const itemCollection = collection(db, 'items');
-
-    // const q = query(
-    //   itemCollection,
-    //   where('price', '<', 5000),
-    //   limit(1)
-
-    // )
-
-    // getDocs(q)
-    //   .then(snapshot=>{
-    //     console.log(snapshot.docs.map(doc => { 
-    //       return { ...doc.data(), id : doc.id }
-    //     }))
-    //   })
-    //   .catch(
-    //     err => console.log(err)
-    //   );
-
+    setLoad(true)
     getData(categoryId)
+      
       .then(snapshop => {
+        
         setProducts(snapshop.docs.map(doc => {
            return { ...doc.data(), id : doc.id }
           }));
+        setLoad(false)  
+         
       })
       .catch((error)=>console.log("el error",error))
     
@@ -69,7 +55,7 @@ function ItemListContainer (){
 
   return(
     <div className="itemList-principal">
-      <ItemList products={products} />
+      { load ? <Spinner/> : <ItemList products={products} />}
 
     </div>
     
