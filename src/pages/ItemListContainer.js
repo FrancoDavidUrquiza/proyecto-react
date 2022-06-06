@@ -6,6 +6,8 @@ import ItemList from "../components/ItemCount/ItemList";
 import { useParams } from "react-router-dom";
 import {collection,getDocs,getFirestore,query, where} from 'firebase/firestore'
 import Spinner  from '../components/Spinner/Spinner.js';
+import Footer from "../components/Footer/Footer";
+// import Home from '../components/Home/Home.js'
 
 
 
@@ -54,10 +56,22 @@ function ItemListContainer (){
   },[categoryId])
 
   return(
-    <div className="itemList-principal">
-      { load ? <Spinner/> : <ItemList products={products} />}
+    <>
+      {/* <div>
+        <Home></Home>
+      </div> */}
+      
+      <div className="itemList-principal">
+        { load ? <Spinner/> : <ItemList products={products} />}
+        
+        
 
-    </div>
+      </div>
+      
+      <div>
+        <Footer></Footer>
+      </div>
+    </>
     
     
   );

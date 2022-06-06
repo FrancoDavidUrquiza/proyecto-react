@@ -3,6 +3,7 @@ import CartContext from '../../store/cart-context';
 import {collection,addDoc,getFirestore} from 'firebase/firestore'
 import  Spinner  from '../Spinner/Spinner.js';
 import { Link } from 'react-router-dom';
+import Footer from '../Footer/Footer';
 import '../../hojas-de-estilos/checkout.css'
 
 
@@ -121,6 +122,9 @@ const CheckOut = () => {
           }
         </div>
       </div>
+    </div>
+    <div>
+        <Footer></Footer>
     </div>
     </>
   )

@@ -1,3 +1,17 @@
 .itemList-principal{
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: center ;
+  
+ 
+}  
+
+@media (max-width:700px){
+  .itemList-principal{
+    width: 100%;
     display: flex;
+    flex-wrap: wrap;
+  }  
 }
+  

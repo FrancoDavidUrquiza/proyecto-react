@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { doc,getDoc, getFirestore } from 'firebase/firestore'
 import Item from '../components/ItemDetail/Item';
 import Spinner from '../components/Spinner/Spinner.js'
+import Footer from '../components/Footer/Footer';
 
 const getItem = (id) =>{
   const db = getFirestore();
@@ -35,6 +36,9 @@ function ItemDetailContainer() {
   return (
     <>
       { load ? <Spinner/> : <Item item={item}  />}
+      <div>
+        <Footer></Footer>
+      </div>
 
 
     </>

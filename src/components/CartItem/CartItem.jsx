@@ -1,5 +1,6 @@
 import React, {useContext} from 'react';
 import CartContext from '../../store/cart-context.js';
+import { BsFillCartXFill } from "react-icons/bs";
 
 
 function CartItem({ item }) {
@@ -19,7 +20,12 @@ function CartItem({ item }) {
                 <p>Precio Unitario :${ item?.price }</p>
                 <p>Cantidad : { item?.quantity}</p>
                 <p>Precio Total :${ item.price * item.quantity }</p>
-                <button onClick={()=>cartCtx.removeProduct(item.id)}>Remover Producto</button>
+                <button 
+                    
+                    onClick={()=>cartCtx.removeProduct(item.id)}>
+                    <BsFillCartXFill  color='red' size={25} />
+                </button>
+                
                 
             </div>
 
