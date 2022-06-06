@@ -2,7 +2,7 @@
 
 ## :link: Live Project
 
-### <a href='https://vercel.com/francodavidurquiza/proyecto-react/CvKo3MDSC7EKzARXprpNpu7rqoC6'>  Beth Crochetera </a>
+### <a href='https://proyecto-react-hm8jxgx6w-francodavidurquiza.vercel.app/'>  Beth Crochetera </a>
 
 Hosted on <a href='https://vercel.com/'> Vercel </a>
 
